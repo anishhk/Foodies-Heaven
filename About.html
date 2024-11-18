@@ -4,49 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
+    <link rel="stylesheet" href="./aboutus.css" />
   </head>
   <body>
-    <header>
-      <h1>Welcome to Foodies Heaven</h1>
-    </header>
+    <nav class="navbar-container">
+      <div>
+        <button class="menu-button" onclick="toggleNavbar()">☰</button>
+        <div class="navbar hidden" id="navbar">
+          <a href="index.html" class="navi">Home</a>
+          <a href="about.html" class="navi">About Us</a>
+          <a href="Contacts.html" class="navi">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>About Us</h1>
+      <div class="content">
+        <p>
+          Welcome to <strong>Foodies Heaven</strong>, your ultimate destination
+          for delightful and delectable recipes from around the world! Our
+          mission is to inspire people to cook and share meals with loved ones,
+          making every moment around the table special.
+        </p>
 
-    <h2>About Us</h2>
-    <p>
-      At <strong>Foodies Heaven</strong>, we are passionate about food and
-      believe that every meal is an opportunity to create and share
-      unforgettable flavors. Our blog is dedicated to providing delicious,
-      easy-to-follow recipes that bring joy and excitement to your kitchen.
-    </p>
-    <p>
-      Whether you're a home cook experimenting with new dishes or a seasoned
-      chef looking for inspiration, our goal is to make cooking an enjoyable and
-      creative experience. We cover a wide range of cuisines and dishes, from
-      classic comfort foods to adventurous international flavors.
-    </p>
-    <p>
-      Join our community of food lovers and let's explore the world of culinary
-      delights together. We're here to inspire, support, and share the joy of
-      cooking with you!
-    </p>
-    <hr>
-    <footer>
-        &copy; 2024 Foodies Heaven. All rights reserved.
-      <p>
-        Disclaimer: The recipes and tips shared on Foodies Heaven are for
-        informational and entertainment purposes only. While we strive to
-        provide accurate and reliable information, we cannot guarantee that
-        every recipe will suit your personal dietary needs or preferences.
-        Always consult with a professional nutritionist or your healthcare
-        provider if you have any dietary restrictions or health concerns. We are
-        not responsible for any cooking mishaps, allergic reactions, or adverse
-        effects that may occur from following our recipes. Enjoy experimenting
-        in your kitchen and always cook responsibly!
-      </p>
-      <nav>
-        <a href="index.html">Home</a>  |
-        <a href="about.html">About Us</a> |
-        <a href="Contacts.html">Contact</a>
-      </nav>
-    </footer>
+        <p>
+          Founded in 2024, Foodies Heaven started as a small blog for sharing
+          our passion for cooking and has grown into a community of food
+          enthusiasts who believe in the magic of home-cooked meals. We are
+          dedicated to providing you with easy-to-follow recipes that are not
+          only delicious but also use fresh and accessible ingredients.
+        </p>
+
+        <div class="mission">
+          <h2>Our Mission</h2>
+          <p>
+            Our mission is to make cooking enjoyable and accessible for
+            everyone. We aim to empower home chefs to create flavorful meals and
+            learn new techniques, all while making cooking an engaging and
+            creative experience.
+          </p>
+        </div>
+
+        <div class="vision">
+          <h2>Our Vision</h2>
+          <p>
+            Our vision is to become the go-to source for all things related to
+            cooking and food. We dream of building a global community where food
+            lovers can share, learn, and be inspired by each other's culinary
+            adventures.
+          </p>
+        </div>
+
+        <p>
+          Thank you for joining us on this flavorful journey. We're thrilled to
+          have you as part of our Foodies Heaven family, and we hope to continue
+          sharing our passion for great food with you for years to come!
+        </p>
+      </div>
+    </div>
+    <script>
+      function toggleNavbar() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('hidden');
+    }
+    </script>
   </body>
 </html>

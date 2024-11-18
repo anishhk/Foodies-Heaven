@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dosa</title>
+    <link rel="stylesheet" href="./recipie.css">
   </head>
   <body>
     <header>
@@ -13,9 +14,19 @@
         cuisine made from a fermented batter of ground black gram and rice.
       </i>
     </header>
+    <nav class="navbar-container">
+      <div>
+        <button class="menu-button" onclick="toggleNavbar()">☰</button>
+        <div class="navbar hidden" id="navbar">
+          <a href="index.html" class="navi">Home</a>
+          <a href="about.html" class="navi">About Us</a>
+          <a href="Contacts.html" class="navi">Contact</a>
+        </div>
+      </div>
+    </nav>
     <br />
     <section>
-      <img src="./Images/Dosa.jpg" alt="Savouring image of Dosa" />
+      <div class="box"><img src="Dosa.jpg" alt="Savouring image of Dosa Pasta" class="image"/></div>
       <p>
         <b>Dosa</b> is a popular South Indian dish that has gained worldwide
         recognition for its crispy texture and savory flavor. It is a type of
@@ -151,5 +162,11 @@
         <a href="Contacts.html">Contact</a>
       </nav>
     </footer>
+    <script>
+      function toggleNavbar() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('hidden');
+    }
+    </script>
   </body>
 </html>

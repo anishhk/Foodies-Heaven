@@ -3,56 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
-</head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactus.css">
 <body>
-    <header>
-        <h2>Contact Us</h2>
-        <i>For any queries on this site, fill this form to contact us.</i>
-    </header>
-    <br>
-    <main>
-        <form action="#" method="post">
-            <fieldset>
-                <legend>Feedback Form</legend>
-                <label for="fname">First Name:</label>
-                <input type="text" id="fname" required><br><br>
-                <label for="lname">Last Name:</label>
-                <input type="text" id="lname"required><br><br>
-                <label for="gender">Male</label>
-                <input type="radio" id="gender" value="Male" name="gender">
-                <label for="gender">Female</label>
-                <input type="radio" id="gender" value="Female" name="gender"><br><br>
-                <label for="mail">E-mail:</label>
-                <input type="email" id="mail"required><br><br>
-                <label for="phone">Mobile:</label>
-                <input type="number" id="phone"required><br><br>
-                <label for="query">Message:</label>
-                <input type="text" id="query"><br><br>
-                <input type="submit" value="submit">
-            </fieldset>
-        </form>
-    </main>
-    <br><br>
-    <hr>
-    <footer>
-        &copy; 2024 Foodies Heaven. All rights reserved.
-      <p>
-        Disclaimer: The recipes and tips shared on Foodies Heaven are for
-        informational and entertainment purposes only. While we strive to
-        provide accurate and reliable information, we cannot guarantee that
-        every recipe will suit your personal dietary needs or preferences.
-        Always consult with a professional nutritionist or your healthcare
-        provider if you have any dietary restrictions or health concerns. We are
-        not responsible for any cooking mishaps, allergic reactions, or adverse
-        effects that may occur from following our recipes. Enjoy experimenting
-        in your kitchen and always cook responsibly!
-      </p>
-      <nav>
-        <a href="index.html">Home</a>  |
-        <a href="about.html">About Us</a> |
-        <a href="Contacts.html">Contact</a>
+    <nav class="navbar-container">
+        <div>
+          <button class="menu-button" onclick="toggleNavbar()">☰</button>
+          <div class="navbar hidden" id="navbar">
+            <a href="index.html" class="navi">Home</a>
+            <a href="about.html" class="navi">About Us</a>
+            <a href="Contacts.html" class="navi">Contact</a>
+          </div>
+        </div>
       </nav>
-    </footer>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <p><strong>Our Location:</strong> 1234 Foodies Heaven Lane, Gourmet City, IN 123456 </p>
+            <p><strong>Phone:</strong> +91 9876543210</p>
+            <p><strong>Email:</strong> <a href="mailto:support@foodiesheaven.com">support@foodiesheaven.com</a></p>
+            <p><strong>Business Hours:</strong> Monday - Friday: 9:00 AM to 5:00 PM (EST)</p>
+        </div>
+        <div class="social-links">
+            <p>Follow Us: 
+                <a href="www.facebook.com" target="Facebook">Facebook</a> | 
+                <a href="www.innstagram.com" target="Instagram">Instagram</a> | 
+                <a href="www.twitter.com" target="Twitter">Twitter</a>
+            </p>
+        </div>
+        <h2>Send Us a Message</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        function toggleNavbar() {
+          const navbar = document.getElementById('navbar');
+          navbar.classList.toggle('hidden');
+      }
+      </script>
 </body>
 </html>
+

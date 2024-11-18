@@ -4,46 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foodies Haven</title>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <header id="top">
-      <h1>Foodies heaven<sup>&copy;</sup></h1>
-      <em>Where Every Recipe Tells a Story</em>
-      <hr />
+      <h1 id="head">Foodies heaven<sup>&copy;</sup></h1>
+      <em id="tagline">Where Every Recipe Tells a Story</em>
+   
     </header>
-    <nav>
-      <h3>
-        <nav>
-            <a href="#top">Home</a>  |
-            <a href="about.html">About Us</a> |
-            <a href="Contacts.html">Contact</a>
-          </nav>
-      </h3>
-      <hr />
-    </nav>
+        <nav class="navbar-container">
+          <div>
+            <button class="menu-button" onclick="toggleNavbar()">☰</button>
+            <div class="navbar hidden" id="navbar">
+              <a href="#top" class="navi">Home</a>
+              <a href="about.html" class="navi">About Us</a>
+              <a href="Contacts.html" class="navi">Contact</a>
+            </div>
+          </div>
+        </nav>
     <section>
       <p>
-        Welcome to <strong>Foodies Heaven<sup>&copy;</sup></strong>, where every recipe is a
-        delicious adventure waiting to unfold! Here, we celebrate the joy of
-        cooking with mouthwatering dishes that bring comfort and excitement to
-        your table. Whether you're a seasoned chef or just beginning your
-        culinary journey, our recipes are crafted to inspire, delight, and
-        satisfy your inner foodie. Let's dive into a world where flavors come
-        alive and every bite feels like a taste of heaven!
+        Welcome to <strong>Foodies Heaven<sup>&copy;</sup></strong
+        >, where every recipe is a delicious adventure waiting to unfold! Here,
+        we celebrate the joy of cooking with mouthwatering dishes that bring
+        comfort and excitement to your table. Whether you're a seasoned chef or
+        just beginning your culinary journey, our recipes are crafted to
+        inspire, delight, and satisfy your inner foodie. Let's dive into a world
+        where flavors come alive and every bite feels like a taste of heaven!
       </p>
     </section>
     <main>
       <h3>Recipies List</h3>
-      <ul>
-        <li><a href="Malatang.html">Malatang</a></li>
-        <li><a href="Dosa.html">Dosa</a></li>
-        <li><a href="Ravioli.html">Ravioli Pasta</a></li>
+      <ul id="recipie">
+        <li class="list">
+          <a href="Malatang.html"
+            ><img
+              src="Malatang.jpg"
+              alt="Image of malatang"
+            /><br />Malatang</a
+          >
+        </li>
+        <li class="list">
+          <a href="Dosa.html"
+            ><img src="Dosa.jpg" alt="image of dosa" /><br />Dosa</a
+          >
+        </li>
+        <li class="list">
+          <a href="Ravioli.html"
+            ><img
+              src="Ravioli.jpg"
+              alt="image of ravioli"
+            /><br />Ravioli Pasta</a
+          >
+        </li>
       </ul>
     </main>
     <br /><br /><br /><br />
     <hr />
     <footer>
-        &copy; 2024 Foodies Heaven. All rights reserved.
+      &copy; 2024 Foodies Heaven. All rights reserved.
       <p>
         Disclaimer: The recipes and tips shared on Foodies Heaven are for
         informational and entertainment purposes only. While we strive to
@@ -56,10 +75,15 @@
         in your kitchen and always cook responsibly!
       </p>
       <nav>
-        <a href="#top">Home</a>  |
-        <a href="about.html">About Us</a> |
+        <a href="#top">Home</a> | <a href="about.html">About Us</a> |
         <a href="Contacts.html">Contact</a>
       </nav>
     </footer>
+    <script>
+      function toggleNavbar() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('hidden');
+    }
+    </script>
   </body>
 </html>

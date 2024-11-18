@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ravioli</title>
+    <link rel="stylesheet" href="./recipie.css">
   </head>
   <body>
     <header>
@@ -14,9 +15,20 @@
         originated as a traditional food in Italian cuisine.</i
       >
     </header>
+    <nav class="navbar-container">
+      <div>
+        <button class="menu-button" onclick="toggleNavbar()">☰</button>
+        <div class="navbar hidden" id="navbar">
+          <a href="index.html" class="navi">Home</a>
+          <a href="about.html" class="navi">About Us</a>
+          <a href="Contacts.html" class="navi">Contact</a>
+        </div>
+      </div>
+    </nav>
     <br />
     <section>
-      <img src="./Images/Ravioli.jpg" alt="Savouring image of Ravioli Pasta" />
+      <div class="box"><img src="Ravioli.jpg" alt="Savouring image of Ravioli Pasta" class="image"/></div>
+      
       <p>
         <b>Ravioli</b> is a type of Italian pasta consisting of small, square or
         circular pockets filled with various ingredients. The filling can be
@@ -181,5 +193,11 @@
         <a href="Contacts.html">Contact</a>
       </nav>
     </footer>
+    <script>
+      function toggleNavbar() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('hidden');
+    }
+    </script>
   </body>
 </html>
